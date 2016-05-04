@@ -20,28 +20,55 @@
     </div>
     <nav>
         <ul>
-            <li><a href="blog.html">All Blog Items</a></li>
-            <li><a href="blog.html">Work Items</a></li>
-            <li><a href="blog.html">University Items</a></li>
-            <li><a href="blog.html">Family Items</a></li>
-            <li><a href="add.html">Insert a Blog Item</a></li>
+            <li><a href="blog.php">All Blog Items</a></li>
+            <li><a href="blog.php">Work Items</a></li>
+            <li><a href="blog.php">University Items</a></li>
+            <li><a href="blog.php">Family Items</a></li>
+            <li><a href="add.php">Insert a Blog Item</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <section class="grid-70">
-        <div id = "blogdisplay">
+    <section>
+        <div id="blogitem">
             <?php
-            include("dbconnection.php");
-            $getblog = "SELECT * FROM blogview";
-            $result = mysqli_query($db, $getbugs);
-
-            while($row = mysql_fetch_array($result, MYSQL_ASSOC)){
-                echo "{$row['entryTitle']}" . "by" ."{$row['submitter']} <br><br><br>";
-                echo "{$row['category']}<br><br><br>";
-                echo "{$row['entrySummary']}<br><br><br>";
+            include ("db_connection.php");
+            if($_GET['category']=="university"){
+                $getblogs = "SELECT * FROM blogview where category like '%university'";
+                $result = mysqli_query($db, $getblogs);
+                while ($row = mysqli_fetch_array($result)) { 1
+                         echo "<h2>". $row['entryTitle'] . "by". $row['submitter'] ."</h2>";
+                         echo "<h6>". $row['category'] . "</h6>";
+                         echo "<p>". $row['entrySummary'] . "</p>";
+                     }
+            }elseif($_GET['category']=="work"){
+                $getblogs = "SELECT * FROM blogview where category like '%work'";
+                $result = mysqli_query($db, $getblogs);
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<h2>". $row['entryTitle'] . " by ". $row['submitter'] ."</h2>";
+                    echo "<h6>". $row['category'] . "</h6>";
+                    echo "<p>". $row['entrySummary'] . "</p>";
+                }
+            }elseif($_GET['category']=="family"){
+                $getblogs = "SELECT * FROM blogview where category like '%family'";
+                $result = mysqli_query($db, $getblogs);
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<h2>". $row['entryTitle'] . " by ". $row['submitter'] ."</h2>";
+                    echo "<h6>". $row['category'] . "</h6>";
+                    echo "<p>". $row['entrySummary'] . "</p>";
+                }
+            }else{
+                $getblogs = "SELECT * FROM blogview";
+                $result = mysqli_query($db, $getblogs);
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<h2>". $row['entryTitle'] . " by ". $row['submitter'] ."</h2>";
+                    echo "<h4>". $row['category'] . "</h4>";
+                    echo "<p>". $row['entrySummary'] . "</p>";
+                }
             }
             ?>
+
+
         </div>
     </section>
 
