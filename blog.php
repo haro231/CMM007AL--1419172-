@@ -61,9 +61,9 @@
                 $getblogs = "SELECT * FROM blogview";
                 $result = mysqli_query($db, $getblogs);
                 while ($row = mysqli_fetch_array($result)) {
-                    echo "<h2>". $row['entryTitle'] . " by ". $row['submitter'] ."</h2>";
-                    echo "<h4>". $row['category'] . "</h4>";
-                    echo "<p>". $row['entrySummary'] . "</p>";
+                    echo "<h2>". $row['entryTitle'] . " by ". $row['submitter'] ."</h2>""<br><br><br>";
+                    echo "<h4>". $row['category'] . "</h4>"."<br><br><br>";
+                    echo "<p>". $row['entrySummary'] . "</p>"."<br><br><br>";
                 }
             }
             ?>

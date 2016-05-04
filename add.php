@@ -114,7 +114,7 @@ include ("dbconnection.php");
 if (empty($_POST['title']) || empty($_POST['summary']) || empty($_POST['category']) || empty($_POST['writer'])){
     echo "Fill all feilds";
 }
-elseif(){
+else{
     $title = $_POST['title'];
     $summary = $_POST['summary'];
     $category = $_POST['category'];
