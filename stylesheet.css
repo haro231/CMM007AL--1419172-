@@ -24,7 +24,7 @@ ul{
 li{
     float: left;
  }
-nav ul li a{
+li a{
     text-decoration: none;
     text-align: center;
     display: block;
@@ -72,29 +72,26 @@ input[type=submit] {
 main{
     min-height: 500px;
 }
-content #home p{
-     magin-top: 30px;
-     margin-right: 10px;
- }
 #blogitem{
      width: 576px;
      display: block;
      padding: 10px 10px;
  }
 #blogitem p{
-     border-bottom: 5px solid black;
+     border-bottom: 10px solid black;
  }
 #blogitem h3{
-     margin-top: 40px;
-     margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+
 }
 #blogitem h5{
      margin-bottom: 10px;
  }
 #sitelogo{
-    width: 369px;
-    margin-top: 30px;
-    margin-right: 15px;
+    width: 390px;
+    margin-top: 40px;
+    margin-right: 20px;
 }
 footer{
     padding: 16px;
