@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>myBlog</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="unsemantic-grid-responsive-tablet.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Passion+One' rel='stylesheet' type='text/css'>
+    <meta name="viewpoint"
+          content="width=device-width,
+         initial-scale=1,
+         minimum-scale=1,
+         maximum-scale=1"/>
+</head>
+<body>
+<header>
+    <div id="top">
+        <h1>myBlog</h1>
+        <h2>because the internet needs to know what i think</h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="blog.html">All Blog Items</a></li>
+            <li><a href="blog.html">Work Items</a></li>
+            <li><a href="blog.html">University Items</a></li>
+            <li><a href="blog.html">Family Items</a></li>
+            <li><a href="add.html">Insert a Blog Item</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main class="grid-container">
+    <content class="grid-60">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et erat tincidunt, tincidunt orci in, consequat enim.
+            Mauris ultricies bibendum magna nec fermentum.
+            Fusce magna augue, dictum nec odio nec, posuere dictum metus.
+            Donec gravida luctus vehicula. Nullam eget accumsan eros, vitae euismod metus.
+            Vestibulum augue lectus, auctor at egestas in, viverra ut ante.
+            Curabitur pretium ante tortor.
+            Vestibulum scelerisque ac eros vitae tempor. Pellentesque diam metus, sagittis sit amet ipsum vel, condimentum pharetra urna.
+            Mauris elementum tellus vel enim pretium, non fermentum nisi sodales.
+            Donec at sagittis nulla. Cras vel urna ut lacus tempus posuere.
+            Nunc turpis mauris, molestie ac auctor ut, convallis sed lectus.
+            Suspendisse id ligula mollis orci finibus finibus nec eu lorem.
+            Aenean a dolor quam. Aenean bibendum turpis enim, lacinia interdum orci venenatis at.
+            Vivamus sit amet turpis eget risus interdum vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quisque ultrices lectus lacus, tincidunt egestas lacus interdum vel. Nulla finibus odio nisl, et cursus orci finibus ac.
+        </p>
+    </content>
+    <aside class="grid-40">
+        <img src="blog.png" alt="myBlog" id="sitelogo">
+    </aside>
+</main>
+
+<footer>
+
+    <p>Designed by Asin Harry Uche, 2016</p>
+</footer>
+</body>
+</html>
